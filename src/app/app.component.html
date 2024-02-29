@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+
+  <button mat-icon-button [matMenuTriggerFor]="menu"  aria-label="Menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" class="sub-menu">
+    <button mat-menu-item>
+      <mat-icon fontIcon="home"  class="material-symbols-outlined"></mat-icon>
+      <span [routerLink]="['/tasks']">Home</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon fontIcon="data_check" class="material-symbols-outlined"></mat-icon>
+      <span [routerLink]="['/tasks/list']">Lista de Tarefas</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon fontIcon="new_window" class="material-symbols-outlined"></mat-icon>
+      <span [routerLink]="['/tasks/new']">Nova tarefa</span>
+    </button>
+  </mat-menu>
+  <span>Gerenciador de Tarefas</span>
+
+</mat-toolbar>
+<router-outlet></router-outlet>

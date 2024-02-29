@@ -1,0 +1,22 @@
+<form (ngSubmit)="sndData()"  class="formEdit">
+
+  <p>
+    <mat-form-field>
+      <mat-label>Task</mat-label>
+      <textarea matInput >{{ task.description }}</textarea>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Data para finalizar</mat-label>
+      <input matInput value="{{ task.data | date : 'dd/MM/yyyy' }}" >
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <button  mat-raised-button color="primary" type="submit">
+        Enviar
+      </button>
+    </mat-form-field>
+  </p>
+</form>

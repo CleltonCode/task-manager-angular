@@ -1,0 +1,39 @@
+*{
+  margin: 0 auto;
+  width: 90%;
+}
+
+.card {
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+.title{
+  width: auto;
+  padding-bottom: 20px;
+}
+
+.content{
+  align-content: center;
+}
+
+.mat-divider{
+  width: auto;
+  align-content: center;
+}
+
+.mat-mdc-button{
+  width: 150px;
+}
+
+p{
+  width: 100%;
+  padding-left: 10px;
+}
+
+.mat-mdc-card-footer{
+  font-family: "Caudex", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+ 

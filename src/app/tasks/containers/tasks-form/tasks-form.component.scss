@@ -1,0 +1,28 @@
+
+mat-card{
+  max-width: 30%;
+  margin:2em auto;
+  text-align: center;
+}
+span{
+  color: rgb(126, 121, 121);
+  text-align: left;
+  margin: 5px 0 0 15px;
+}
+mat-card-content{
+  margin-top: 10px;
+}
+.task-form {
+  min-width: 150px;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.min-width{
+  width: 100%;
+  min-width: 150px;
+}

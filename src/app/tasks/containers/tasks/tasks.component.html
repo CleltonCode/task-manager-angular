@@ -1,0 +1,38 @@
+<mat-card>
+  <mat-toolbar >Task List</mat-toolbar>
+  <div class="button-container">
+    <button mat-raised-button class="button-task" (click)="onAdd()">
+      Nova Task
+    </button>
+  </div>
+
+  @if (Tasks$ | async; as tasks){
+    <div class="mat-elevation-z8">
+      <app-task-list
+      [tasks]="tasks.tasks"
+      (add)="onAdd()"
+      (edit)="onEdit($event)"
+      (remove)="onRemove($event)">
+      </app-task-list>
+
+      <mat-paginator
+      [pageSizeOptions]="[5, 10, 15]"
+      showFirstLastButtons
+      [pageIndex]="pageIndex"
+      [pageSize]="pageSize"
+      [length]="tasks.totalElements"
+      (page)="refresh($event)"
+      aria-label="Select page de tasks"
+    >
+    </mat-paginator>
+  </div>
+  }@else {
+    <ng-template #loading>
+      <div class="loading-spinner">
+        <mat-spinner></mat-spinner>
+      </div>
+    </ng-template>
+  }
+
+
+</mat-card>

@@ -1,0 +1,56 @@
+    <mat-table [dataSource]="tasks">
+
+      <ng-container matColumnDef="id">
+        <mat-header-cell  *matHeaderCellDef> Id </mat-header-cell>
+        <mat-cell  *matCellDef="let tasks"> {{ tasks.id }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="data">
+        <mat-header-cell  *matHeaderCellDef> Data </mat-header-cell>
+        <mat-cell  *matCellDef="let tasks"> {{ tasks.data | date : 'dd/MM/yyyy' }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef> Tarefa </mat-header-cell>
+        <mat-cell *matCellDef="let tasks"> {{ tasks.description }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="completed">
+        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+        <mat-cell  *matCellDef="let tasks">
+          <ng-container *ngIf="tasks.completed == 'sim'; else notCompleted">
+            <span class="concluido">Concluída</span>
+          </ng-container>
+          <ng-template #notCompleted>
+            <span  class="naoconcluido">Não concluída</span>
+          </ng-template>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="change">
+        <mat-header-cell mat-header-cell *matHeaderCellDef> Alterações </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let tasks">
+          <button
+          mat-icon-button
+          color="primary"
+          aria-label="Editar Curso"
+          (click)="onEdit(tasks)"><mat-icon>edit</mat-icon></button>
+
+          <button
+          mat-icon-button
+          color="warn"
+          aria-label="Remover Curso"
+          (click)="onDelete(tasks)"><mat-icon>delete</mat-icon></button>
+
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+
+
+
+
+

@@ -1,5 +1,7 @@
 # TaskManager
 
+Api front-end developed in Java
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
 ## Development server
@@ -25,4 +27,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# task-manager-angular
+
+
+## Autor
+- Clelton Henrique
+- [cleltonh@gmail.com]
+- [[linkedin](https://www.linkedin.com/in/clelton-henrique)]
+
+Sinta-se à vontade para explorar, contribuir e utilizar a Task Manager API! 😊
